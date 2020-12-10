@@ -213,7 +213,6 @@ function win(nCases, nBomb) {
             win++
         }
     }
-    console.log(win);
     if (win === (nCases - nBomb)) {
         return true
     }
