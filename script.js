@@ -7,20 +7,17 @@ let table = [];
 
 buttonF.addEventListener("click", function () {
     container.style.width = "30%";
-    let del = table.length;
-    reset(25, 6, del);
+    reset(25, 6, table.length);
 })
 
 buttonM.addEventListener("click", function () {
     container.style.width = "60%";
-    let del = table.length;
-    reset(100, 24, del);
+    reset(100, 24, table.length);
 })
 
 buttonD.addEventListener("click", function () {
     container.style.width = "80%";
-    let del = table.length;
-    reset(225, 54,del);
+    reset(225, 54,table.length);
 })
 
 function mines(nCases) {
@@ -40,7 +37,6 @@ function mines(nCases) {
 }
 
 function game(nCases, nBomb){
-    let del = table.length;
     for(let choice of container.children) {
         choice.addEventListener("mouseup", function (e) {
             switch (e.button) {
@@ -51,7 +47,7 @@ function game(nCases, nBomb){
                             perdu[i].style.opacity = "1";
                         }
                         alert("Perdu");
-                        reset(nCases, nBomb, del);
+                        reset(nCases, nBomb, table.length);
                     }
                     else {
                         noBomb(choice, nCases);
@@ -75,7 +71,7 @@ function game(nCases, nBomb){
             }
             if(win(nCases, nBomb) === true) {
                 alert("Bravo");
-                reset(nCases, nBomb, del);
+                reset(nCases, nBomb, table.length);
             }
         });
     }
