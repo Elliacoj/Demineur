@@ -8,7 +8,6 @@ let table = [];
 buttonF.addEventListener("click", function () {
     container.style.width = "30%";
     let del = table.length;
-    console.log(del);
     reset(25, 6, del);
 })
 
