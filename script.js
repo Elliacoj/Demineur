@@ -88,7 +88,7 @@ function reset(nCases, nBomb, del){
             container.removeChild(container.firstElementChild)
         }
         for(let y = 0; y < del; y++) {
-            let lastD = table.pop();
+            table.pop();
         }
     }
 
@@ -98,7 +98,7 @@ function reset(nCases, nBomb, del){
         cases.style.width = (95 / Math.sqrt(nCases)) + "%" ;
         cases.style.height = "35px";
         container.appendChild(cases);
-        let encreT = table.push(cases);
+        table.push(cases);
 
     }
     for(let x = 0; x < nBomb; x++) {
